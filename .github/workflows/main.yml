@@ -1,4 +1,4 @@
-name: CI
+name: Ubuntu
 
 on: [push]
 
@@ -9,6 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: Run ENV
+      run: env
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
